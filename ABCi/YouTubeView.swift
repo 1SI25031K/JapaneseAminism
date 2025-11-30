@@ -64,7 +64,6 @@ struct YouTubeView: ViewRepresentable {
         loadVideo(in: nsView)
     }
     #endif
-
     // ---------------------------------------------------------
     // iOS / iPadOS (UIViewRepresentable) 用の実装
     // ---------------------------------------------------------

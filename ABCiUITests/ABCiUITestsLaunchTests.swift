@@ -4,7 +4,6 @@
 //
 //  Created by Kosei Miyamoto on 2025/11/17.
 //
-
 import XCTest
 
 final class ABCiUITestsLaunchTests: XCTestCase {

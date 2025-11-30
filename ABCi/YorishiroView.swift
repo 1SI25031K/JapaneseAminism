@@ -24,6 +24,8 @@ struct YorishiroView: View {
                 Text("yorishiro.title")
                     .font(.largeTitle)
                     .fontWeight(.bold)
+                SpeechButton(textKeys: ["yorishiro.p1", "yorishiro.p2", "yorishiro.p3"])
+                        .padding(.bottom, 10)
 
                 // --- Dynamic Element (Long Press Ritual) ---
                 ZStack {
@@ -81,7 +83,6 @@ struct YorishiroView: View {
                 .frame(height: 350)
                 .frame(maxWidth: .infinity)
                 .clipShape(RoundedRectangle(cornerRadius: 12))
-                // ★長押しジェスチャー
                 .onLongPressGesture(minimumDuration: 3.0, pressing: { pressing in
                     // 押している間/離した瞬間呼ばれる
                     withAnimation(.easeInOut(duration: 0.5)) {
@@ -92,6 +93,7 @@ struct YorishiroView: View {
                         #if os(macOS)
                         NSHapticFeedbackManager.defaultPerformer.perform(.alignment, performanceTime: .default)
                         #endif
+                        playSound(fileName: "Angel", fileType: "mp3")
                     }
                 }, perform: {
                     // 3秒押し切った時に呼ばれる

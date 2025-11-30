@@ -26,6 +26,8 @@ struct ShikigamiView: View {
                 Text("shikigami.title")
                     .font(.largeTitle)
                     .fontWeight(.bold)
+                SpeechButton(textKeys: ["shikigami.p1", "shikigami.p2", "shikigami.p3"])
+                        .padding(.bottom, 10)
 
                 // --- Dynamic Element (Drag & Drop Ritual) ---
                 

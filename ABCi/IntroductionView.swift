@@ -17,13 +17,12 @@ struct IntroductionView: View {
                 Text("intro.title")
                     .font(.largeTitle) // 大きなフォント
                     .fontWeight(.bold) // 太字
-                
                 // 4. [Image 1] のプレースホルダー
                 // 今後、ここに画像を追加します
-                Rectangle() // 仮の四角形
-                    .fill(Color.gray.opacity(0.3)) // 薄いグレー
-                    .frame(height: 250) // 高さを指定
-                    .overlay(Text("[Image 1: Conceptual BCI Art]")) // 仮のテキスト
+               Image("gallery_0")
+                    .resizable()
+                SpeechButton(textKeys: ["intro.p1", "intro.p2", "intro.p3"])
+                        .padding(.bottom, 10)
                 
                 // 5. 段落 (String Catalogから)
                 Text("intro.p1")

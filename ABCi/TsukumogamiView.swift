@@ -25,7 +25,8 @@ struct TsukumogamiView: View {
                 Text("tsukumogami.title")
                     .font(.largeTitle)
                     .fontWeight(.bold)
-
+                SpeechButton(textKeys: ["tsukumogami.p1", "tsukumogami.p2", "tsukumogami.p3"])
+                        .padding(.bottom, 10)
                 // --- Dynamic Element (Hover + Tap + Sound) ---
                 ZStack {
                     // 背景の円 (ホバー時に少し光る演出)
@@ -73,13 +74,11 @@ struct TsukumogamiView: View {
                 // ----------------------------------
                 .onTapGesture {
                     // 1. タップ時に音を再生
-                    playSound(fileName: "wood_creak", fileType: "mp3")
-                    
+                    playSound(fileName: "Horror", fileType: "mp3")
                     // 2. 振動(Haptics)を加える (トラックパッド等で感触があれば)
                     #if os(macOS)
                     NSHapticFeedbackManager.defaultPerformer.perform(.alignment, performanceTime: .default)
                     #endif
-                    
                     // 3. 画像を切り替え
                     withAnimation(.spring(response: 0.5, dampingFraction: 0.5)) {
                         isShowingYokai.toggle()
