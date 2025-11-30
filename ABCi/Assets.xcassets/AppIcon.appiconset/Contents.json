@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "Screenshot 2025-11-18 at 17.21.39-1024x1024.png",
+      "filename" : "ABCi-iOS-Default-1024x1024@1x.png",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"
@@ -69,6 +69,7 @@
       "size" : "256x256"
     },
     {
+      "filename" : "ABCi-iOS-Default-512x512@1x.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "512x512"
